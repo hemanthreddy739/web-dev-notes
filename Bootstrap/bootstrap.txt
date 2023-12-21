@@ -1,0 +1,76 @@
+
+information regarding the bootstrap:-
+    
+        it is developed by twitter.
+        and it is maked as open source.
+        -> 2nd most starred project in the github.
+
+        --> to make responsive 
+            -> to make adaptable layout based on the view port or the screen resolution.
+
+            -> can get access to lot of "pre-styled" elements.
+
+            --> "codeply" is a online website to design this website includes lot of frameworks 
+                including "bootstrap".
+
+            --> just on including the "pre-defined" classes into the html elements the styling and
+                    designing can be done very simply.
+
+                    note:-   make sure that u should write the predrfined classes correctly.
+        
+                ============
+
+             
+
+        --> wow fact:-
+    ======================
+        --> bootstrap works as an content delivary network [cdn] 
+            the bootstarp files are made accessed and it is hosted in many places across the world
+            so, the delay is decreased a lot.
+
+    ways to add bootstra:-
+    ========================
+        --> to include boot strap in our website making then place the "cdn" link in the head section .
+        --> use starter template.
+                -> it include bootstarp cdn link, jquery, javascript.
+        --> download bootstrap.css files.
+                and give relative file path iin the styling link.
+        
+
+
+EXAMPLES:-
+============
+<!- "btn-primary" = is blue colour
+
+    "btn-lg" = large button
+    "btn-dark" = dark button 
+    "btn-outline-dark" = gives border dark on hover over
+        
+    tip:- class name lo , prathi word ki '-' vuntundi remember that.
+    
+-->
+
+
+WIRE FRAMING:- it is a low fidelity representation of u r design
+
+        --> "sneakpeekit" --> it is an website that provides an templates for mobile,web, ipad then u can scatch on that print.
+
+        --> "balsamiq" --> it is an industry standard tool and it is collabarative{ it means can share with others.}
+
+
+MOCK-UP :- it is a high fidelity representation of u r design
+
+
+--> for better results of u r end design or webpage 
+    -> watch other websites and go through the site "ui-patterns.com"
+
+
+    ====> website to get inspiration for wwebdesign is:-
+            "dribble.com"
+
+
+--> "navbar-brand" --> works best for <a></a>
+
+--> margins, paddings and all related things comes under the "utolities section"
+    in the documentation of "bootstrap".
+    
