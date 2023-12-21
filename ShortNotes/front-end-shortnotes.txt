@@ -1,0 +1,1812 @@
+
+<!-- 
+    website's required
+        1) codepen.io
+        2) mdn -> mozilla development network
+        3) w3 schools
+    *** 4) devdocs.io
+        5) web.archive.org  -> webpages snapshots (i.e versions)
+-->
+
+
+<!-- it is good practise to use <em> insted of <i> 
+     similarly use <strong> instead of <b> 
+    image tag is a self closing tag.  
+    
+    -> check out "wikigame" to know the hyper-links.
+-->
+
+
+<-- 
+    css related tips and tricks:-
+        -> colorhunt.co  -> it gives an beautiful color combinations.
+        -> browser sets some default css attributes and values to some of the html elements
+            but we can over ride them.
+
+        -> everything in your web page is just a whole bunch of boxes
+           the properties of those boxes can be effected by changing the css code.
+
+        -> width:100px; -> it is hard coded and fixed
+        -> width: 40%;  -> it is flexible as per the viewing resolution.
+
+        -> working of values to the border(box) 
+                -> if value is 1 -> it is applied to all directions.
+                -> if value is 2 -> 1 to top&bottom and 2 to the right&left.
+                -> if value is 3 -> 1 to top , 2 to right&left, 3 to bottom
+                -> if value is 4 -> then order will be t,r,b,l ==> clock wise.
+
+
+-->
+
+
+
+<!--
+
+    chrome developer tools hleps a lot in debuging the html,or web documents.
+
+ -->
+
+
+
+<!--
+
+  mdnwebdoc, and devdocs.io -> great resources to learn.
+
+  -> emojipedia.org -> website that gives the emoji of things.
+
+-->
+
+
+
+/*
+
+    using "tag" as a selector is general;
+    using "class" as a selector is more specific (id also comes under specific);
+    --> if u apply the "general" and "specific" on an element 
+        the "specific" overrides the general, it is the similar property b/w class and id;
+
+        ===> the difference b/w class and id:-
+        =======================================
+        -> id_name should be unique and it should be only one in the entire page.
+        -> more than one element can have the same class name , and clas_name is also used to group 
+           similar items and perform styling operations on them.
+
+        -> we can apply >1 class_names to an single element and use those class names and apply 
+           more specific changes to an some elements.
+
+        -> :name => this kind of property are called "pseudo class"
+            EX:-  :hover
+            for using in css styling , the syntax for selection would be
+                -> element:hover
+
+
+        -> "id" is more specific then "class".
+        
+
+*/
+
+
+/* 
+
+this is the syntax of comments in css
+
+*/
+
+
+<!-- 
+
+    -> favicon( favorite icon) :- the icon that is shown beside the title in the tab.
+    -> favicon.cc -> an website to get your own custamised favicon.
+    -> the favicon extention would be ".ico"
+
+    -> if u r browser doesn't show favicon
+        add "?v=2" at the end of u r "favicon.ico" file.
+        -> or change the extention to ".png"
+
+
+    -> DIVS:-
+    ===========
+    -> div is used to divide u r content into separate boxes or containers.
+
+-->
+
+
+
+
+/*
+
+
+border:solid; --> gives an solid border
+
+let say our div height and width be "300 x 300"
+    if we specify border-width:50px; then the div width not change
+        but our box width will change i.e 50px +300px(div width) + 50px;
+
+margin :- it is an buffer zone b/w the current element and the all other elements,
+           it acts as a invisible seperator.
+
+--> margin doesn't effect the width and height of the total size of box, but
+    the border,padding will effect the total sizes of the box.
+
+	-> but actual 'div-content'size doesn't change.
+
+
+
+
+*/
+
+
+
+====> including of internal css :-
+		<style>  </style>
+====> linking of external css :-
+		<link rel="stylesheet" href="css/styles.css">
+====> linking of favicon:-
+		<link rel="icon" href="favicon.ico?v=2">
+
+==> all those will be putted under the head section.
+
+
+==> inline css will look like this
+
+	<tag style="property:value">  </tag>
+
+=====================================================================================
+
+
+
+/*
+
+-> to underline text using css property, text-decoration:underline;
+
+========> CSS DISPLAYING
+============================
+
+
+DISPLAY --> PROPERTY HAS FOUR DIFFERENT VALUES
+        --> Block
+        --> Inline
+        --> Inline -Block
+        --> None
+
+block display elements:-
+========================
+==> some block elements by default blocks other elements to sit along with them on the webpage.
+    -> by default they only themselves occupy the entire width eventhough they are small size.
+    EXAMPLES:-
+    ============
+    <p> , <headings>, <div>, lists{ <ol> , <ul> }, forms.
+
+
+
+
+		---> the block elements width and height can be changed.
+		--> and without changing the the block elements display property to "inline" if u want to place 
+			something at its beside's like right or left , u can do with the help of the 
+					"float" property.
+							==> float:left;
+		--> then automatically the elements below this come besides to it till it's size.
+
+
+
+				-->EXAMPLE:-
+				==============
+					--> if u apply an float property to an "block" element then it applies till to its box size.
+
+		--> and if u want to stop this way of future elements coming and sitting it's right side.
+
+
+
+
+				use:-
+			=================
+
+				an dummy div
+
+					<div class="dummy-div"></div>
+						
+				and apply the below in the style section
+				<style>
+					.dummy-div{
+							clear:both
+						}
+
+				</style>
+
+
+
+
+
+
+		============> else if u use 
+					display:inline
+			
+				for any block elements then its width and height can't be changed, and all the inline 
+				elements below this automatically come to its beside and sit.
+				but block elements can't sit automatically. but inline-block elements can go.
+
+
+
+
+
+
+
+
+
+==> non blocking elemnts( inline display elements):-
+============================
+
+--> inline elements ki "float" property avasaram ledu endukante avi allow others to sit beside (but inline, inline block will come, but block can't come)
+
+
+-> e type of elements lo  vunna content ki enta space kavalo antha space mathram tiskuntundi.
+    EX:- <span></span>
+         <a>
+
+**> problem with inline elements is -> the width can't be changed.
+        --> but if u change their display property from "inline" to "block" their width
+            can be able to change but now they are blocking.
+
+
+==>  INLINE-BLOCK property has both the advantages.  --> <img>
+
+==> diplay : none;
+    ================
+        -> it makes that element not visible on the page and also the contents in that
+            occupying space is also free and it can be used by some other else element.
+
+    visibility : hidden;
+    =====================
+        this property hides the element from webpage but the space used by the content in it , is still remain there
+        in the webpage.
+
+
+        ***>  children sit on top of parents.
+
+
+
+CSS FLEX PROPERTY:-
+======================
+
+-> this property should be used in the parent element
+	-> using this property the horizontal alligned childrens to vertical and vise versa.
+
+	
+	in the css styling of the parent element :-
+
+		
+			display:flex;
+
+			flex-direction: column/row;
+
+			justify-content : space-around;
+
+
+	-> by default flex-direction value is row
+
+
+
+
+		****> interesting background-image properties:-
+		=================================================
+
+
+			background-position:center;
+
+			background-size : cover;
+
+
+
+
+========> CSS POSITIONING
+============================
+
+--> position --> static   --> by default all html element are static in nature.
+                 relative
+                 absolute
+                 fixed
+                
+
+                 RELATIVE:-
+                 =========
+                 --> margin like space it takes
+                 --> it doesn't effect addamgavunte vativi , it just flow over it.( addamgavunde vatini netteyyodhu, just vati piki pothundhi)
+
+                 --> position : relative
+                        additionally it also require any combination of these
+                            -> top,right,bottom, left
+                    
+                 --> relative position anedi , a element natural ga website meda place ina position nundi.
+
+            =======> ABSOLUTE:-
+            =====================
+                idi dani parent element ki relative ga move avuthundi, so dini daggarlo ni parent "position:relative" ga pettali or edo oka position pettali except 'static'.
+
+                lekapothe default ga "body" ni parent ga anukoni daniki relative ga move avuthundi.
+
+
+
+                    EX:-
+                   =======
+                   <div>
+                        <img>
+
+                   </div>
+
+                   ---------------
+
+                    div{
+                        position:relative;
+
+                    }
+
+                   img{
+                    position:absolute;
+                    right:30px;
+                   }
+
+                   ---> the image element w.r.t its parent element "div" gives 30px right margin.
+
+                   ***>imp>>
+                   ===========
+                   --> in absolute positioning after changing an element their intial space is free now and below elements
+                        can automatically moved,
+                        but in relative the below elements can't move automatically even there is open space on above.
+
+					-> this is because if u assign 'absolute' to an element it is simply removed from the flow of
+                                           webpage and can be able to push any where.    
+
+
+                    =====>FIXED:-
+                =====================
+                    --> if u give "position:fixed" to an element then it is fixed in that position even on scrolling the web-page.
+                    
+
+
+                 
+        CENTERING :-
+        ============
+        -> to center all the { inline-block} elements inside a container,
+                   and that elements are not width specified,
+                   then it is,
+                    |    -> text-align:center;  |
+            -> if that elements are "width" specified then, it would make center by
+                   adding an extra element along with "width"
+                 "  i.e margin : 0 auto;  "
+
+
+
+        FONTS:-
+    =================
+    -> serif :- have a little feet    ---> it is more autoritative, legal, official, serious.
+    -> sans-serif :- doesn't have any feet.  -->> it is friendly, delicious, simple { startup mostly used}
+                        -> under this humanist is more readable.
+    -> monospace:- equal space b/w each character.
+    -> fantasy:- its just like fansy design
+    -> cursive :- handwritten cursive.
+
+    ** better to use websafe fonts so our website text renderd correctly in maximum cases.
+                   --> refer "css font stack" web site.
+                   --> use "fonts.google.com" to embed fonts on to u r website so it works in all users devices:)
+
+
+        LIST OF GOOD FONTS:-
+        =====================
+                   ---> these fonts found in "fonts.google.com"
+
+        -> merriweather
+        -> sacramento   -> handwritten cursive
+        -> montserrat
+
+
+        --> to incorporate those google fonts add the source link in 
+                   the head section of the "index.html"
+
+        --> and use its font-family style in the place where u want to effect the font style.
+
+        -> stick to 2 diff fonts in making beautiful web site,
+                   -> choose similar mood , and time era.
+
+
+
+
+
+
+        ====> CHARACTERISTICS THAT THE GOOD FONTS SHOULD POSSESS:-
+        ===================================================================
+        -> open shapes
+        -> ample inter character spacing
+        -> unambiguous forms
+        -> varying proportions.
+
+
+        ================>
+                   --> best website for images:-
+                   ===============================
+                            --> flaticon.com
+                            -->for animated image--> giphy.com 
+
+    
+
+                ==> in px the font is static.
+                ==> 16px = 100% = 1em
+                ==> then use this equation and use interms of % or em to make dynamic, and the fonts may scale.
+
+
+
+
+                --> the "em" and "%" inherits the value from its parent also, so the current value ==> its present + parent value(inherited)
+                --> where as in "rem" the current value is applied.
+
+                --> so better to use "rem"(root em) instead of "em or %".
+
+
+
+                --> USING the property " clear : left or right"
+                    we can make the text that is floating around an image to set down.
+
+
+
+                --> mostly we use float property.
+
+
+
+
+                --> to generate beautiful buttons:-
+                =====================================
+                    --> use this site:- css3buttongenerator.com
+
+                    
+
+*/
+
+
+
+
+======================================>BOOT STRAP :- ( front end library)
+===============================================================
+
+information regarding the bootstrap:-
+    
+        it is developed by twitter.
+        and it is maked as open source.
+        -> 2nd most starred project in the github.
+
+        --> to make responsive 
+            -> to make adaptable layout based on the view port or the screen resolution.
+
+            -> can get access to lot of "pre-styled" elements.
+
+            --> "codeply" is a online website to 'design  websites', includes lot of frameworks 
+                including "bootstrap".
+
+            --> just on including the "pre-defined" classes into the html elements the styling and
+                    designing can be done very simply.
+
+                    note:-   make sure that u should write the predrfined classes correctly.
+        
+                ============
+
+             
+
+        --> wow fact:-
+    ======================
+        --> bootstrap works as an content delivary network [cdn] 
+            the bootstarp files are made accessed and it is hosted in many places across the world
+            so, the delay is decreased a lot.
+
+	--> cdn decreases delay a lot.
+
+
+    ways to add bootstrap:-
+    ========================
+        --> to include boot strap in our website making, then place the "cdn" link in the head section .
+        --> use starter template.
+                -> it include bootstarp cdn link, jquery, javascript.
+        --> download bootstrap.css files.
+                and give relative file path (bootstrap.min.css) in the styling link.  
+        
+
+
+EXAMPLES:-
+============
+<!- "btn-primary" = is blue colour
+
+    "btn-lg" = large button
+    "btn-dark" = dark button 
+    "btn-outline-dark" = gives border dark on hover over
+        
+    tip:- class name lo , prathi word ki '-' vuntundi remember that.
+    
+-->
+
+
+WIRE FRAMING:- it is a low fidelity representation of u r design
+
+        --> "sneakpeekit" --> it is an website that provides an templates for mobile,web, ipad then u can sketch on that print.
+
+        --> "balsamiq" --> it is an industry standard tool and it is collabarative{ it means can share with others.}
+
+
+MOCK-UP :- it is a high fidelity representation of u r design
+
+
+--> for better results of u r end design or webpage 
+    -> watch other websites and go through the site "ui-patterns.com"
+
+
+    ====> website to get inspiration for webdesign is:-
+            "dribble.com"
+
+
+--> "navbar-brand" --> works best for <a></a>
+
+--> margins, paddings and all related things comes under the "utilities section"
+    in the documentation of "bootstrap".
+    
+
+--> bootstrap helps in designing responsive{ the site responds to the size of the screen or viewport} 
+webpages very easily.
+
+
+
+--> in bootstrap --> "row", "col" are class names
+-->  the class = "col-6" ; takes the 6 units of the total 12 units of the  grid system .
+--> "col-md-6" --> this is also a class which means until the medium sized devices like "tablets" "ipads"
+		       it takes the 6 units i.e half of the screen, when the screen size is below the medium size EX:- mobile
+			 it takes the full length of the screen.
+
+--> class="col-lg-3 col-md-4 col-sm-6"     
+--> for larger screens 1st rule will apply and for medium screens 2nd rule will apply, and for the smallscreens the 3rd rule will  
+    apply, automatically.
+
+
+    
+
+===> containers:-
+=======================
+
+--> class="container"  --> are automatically responsive ---> it changes its maximum width based on the screen size.
+
+	--> by default containers are horizontally centered and content in it is padded.
+
+--> class="container-fluid" --> are scaleup to 100% width at all the time in any screen-resolution.
+
+
+********> dIFFERENCE BETWEEN CONATINER AND CONTAINER FLUID :-
+=================================================================
+In Bootstrap, the "container" and "container-fluid" classes are used for creating responsive layout containers. They have some key differences in terms of their behavior and how they affect the content within them:
+
+1. Fixed Width vs. Fluid Width:
+   - "Container" class: This class creates a container with a fixed width that adapts to different screen sizes. The width of the container remains constant, and it has predefined breakpoints at which it changes its behavior to fit different screen sizes. It provides a responsive layout by centering the content and adding margins on the left and right sides to maintain consistent spacing.
+   - "Container-fluid" class: This class creates a container that spans the entire width of the viewport. It has a fluid width that adjusts to the available space. The container expands or contracts based on the screen size, filling the entire horizontal space. It does not have predefined breakpoints and provides a fully fluid layout.
+
+2. Padding:
+   - "Container" class: Containers created with the "container" class have a small amount of horizontal padding to maintain consistent spacing between the content and the container's edges.
+   - "Container-fluid" class: Containers created with the "container-fluid" class have no padding. The content starts at the very edge of the container, providing a full-width experience.
+
+3. Centered vs. Edge-to-Edge:
+   - "Container" class: The "container" class centers the content horizontally within the container. It adds left and right margins to ensure the content is centered on the page.
+   - "Container-fluid" class: The "container-fluid" class aligns the content to the left edge of the container, spanning the entire width of the viewport.
+
+Usage:
+- Use the "container" class when you want a fixed-width container with centered content and some spacing from the edges.
+- Use the "container-fluid" class when you want a full-width container that spans the entire width of the viewport without any padding.
+
+It's important to choose the appropriate class based on your layout requirements to achieve the desired look and responsiveness.
+
+
+-->  btn   --> class for buttons
+	--> btn-(primary/secondary/light/dark/info/warning/danger)
+	--> btn-outline-  "" 
+	--> btn-lg  --> for large buttons
+	--> btn-sm  --> small buttons
+	--> ==> on putting the word "disabled" in the button element --> the button will be disabled state.
+
+==> <div></div> --> contains buttons
+		inside division if u include the class
+		  ---> class="d-grid gap-2"
+			 --> it will span the entire width of the screen.
+		  ---> class="d-grid gap-2 d-md-block"  ---> from small upto medium the buttons will be span full width 
+									   then the buttons come to normal size.
+		 
+		  ---> class="d-grid gap-2 col-6 mx-auto"   ---> half width block buttons and centered horizontally.
+
+
+         
+
+
+===> remember the visual heirarchy is very important.
+	--> so it can be made super good with the help of
+		-> maintaining the font-weight, size, family,color.
+
+		--> and also by padding, margining of the container.
+
+
+
+
+
+=====>******>  class="carousel slide"    --> it is an slides way of styling.
+
+
+
+		EXAMPLE:-
+	====================
+
+		BASIC SYNTAX OF CAROUSEL:-
+		=================================
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active"  style="background-color:red">
+      
+    </div>
+    <div class="carousel-item" style="background-color:yellow">
+      
+    </div>
+    
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span> --> visible for sighted user,hides for assistive technologies.
+    <span class="visually-hidden">Previous</span>     --> hides for sighted user visible for assistive technologies.
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  
+</div>
+
+
+
+===========================================================================
+
+
+		--> BOOTSTRAP CARDS:-
+		======================
+			--> class="card-deck"   --> in bootstrap cards components using this "card-deck" it is easy to implement cards on the side by side but it is not much responsive. best way is to use the "bootstrap-grid" system in the cards.
+			--> and also "card-deck" is not available in bootstrap-5 it is depricated.
+
+
+
+		EXAMPLE :- bASIC SYANTAX OF BOOTSTRAP CARDS:-
+	=======================================================
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+            </div>
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+
+
+
+
+====> Z-INDEX:-
+===============================
+
+--> z- index only works with one of the property "position:absolute/relative/fixed" but not with static.
+--> by default the z-index value is 0
+--> for making stack --> absolute is necessary for atleast one of them.  { in case u don't want to give any movement by developer}.
+
+
+
+---> "relative" kinda "relative" automatic ga deni kindaki edi podu even "z-index" chala ekkuva pettina.
+--->  "absolute" ("div=500 x 500" ) vundi anukunte dani kinda pettina "divisions"  (50X50) and (470X470) pedithe 
+		-> first (50x50) and next(450x450) varaku (500x500) kindaki velthundi.
+
+
+		-> (500x500) kinda vatiki positions specify cheste piki vasthai.
+
+--> relative ve use cheste --> vatini maname stack ga move chesaka , madyalo vunna danini piki ala 3-d lo move cheseki ( z-index use chestam).
+
+
+==> observe the flow chart.
+
+
+
+====> for making sites working great, the mobile version of sites is also made,
+
+		ex:-   facebook have --> m.facebook.com ==> for mobile, it also works in desktops.
+						 --> facebook.com   ==> for desktops
+
+
+		--> it is the one of the way, and the other way is to make {responsive } so it works in mobile , and desktops.
+		--> the responsiveness can be achieved by "css media queries".
+
+
+
+======================>MEDIA QUERIES:-
+==================================================
+
+syntax:-
+===========
+
+@media <type> <expression>{
+
+
+}
+  
+
+
+		// here <type> is screen, print,speech
+
+		// <expression> or condition , when that condition is true then only the statements inside {} works.
+
+
+
+/* 
+
+Media queries in CSS are a powerful tool that allows web developers to apply different styles to a webpage based on various factors, such as the characteristics of the device or the size of the viewport. By using media queries, you can create responsive web designs that adapt to different screen sizes, ensuring an optimal viewing experience across a wide range of devices.
+
+Media queries consist of a media type and one or more expressions, which define the conditions under which the styles should be applied. The media type specifies the type of device or media the styles are targeting, such as screen, print, or handheld. The expressions are enclosed in parentheses and contain one or more CSS properties and values.
+
+Here's an example of a media query that targets screens with a maximum width of 600 pixels:
+
+```css
+@media screen and (max-width: 600px) {
+  /* Styles to apply when the screen width is 600px or less */
+  body {
+    font-size: 14px;
+  }
+}
+```
+
+In the example above, the styles within the media query block will be applied when the device's screen width is 600 pixels or less. In this case, the font size of the `body` element is set to 14 pixels.
+
+Media queries can also use logical operators to combine multiple expressions. For example:
+
+```css
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  /* Styles to apply when the screen width is 600px or less and the device is in portrait mode */
+  .container {
+    width: 100%;
+  }
+}
+```
+
+In this case, the styles within the media query block will only be applied when the screen width is 600 pixels or less and the device is in portrait mode. The width of the `.container` element is set to 100%.
+
+Media queries can target a wide range of properties, including width, height, device aspect ratio, pixel density, orientation, and more. By utilizing media queries effectively, you can create responsive designs that adapt to different devices, providing an optimal user experience.
+
+
+*/
+
+
+=====================================
+code refactoring:-
+===================
+
+
+--> priority during refactoring the code:-
+    ==========================================
+	1) readability
+	2) modularity
+	3) efficiency
+	4) length.             --> codegolf.stackexchange --> it is an website where u can improve u r code lengthing.
+
+
+
+	==> it is better to move from "WET" TO "DRY".
+		--> remove redundancy.
+	==> and also use combinational of selectors.
+	==> avoid "inline" styliing as much as possible.
+
+	
+
+
+======================================================================
+
+===> combinational of  selectors:-
+=============================
+
+
+	HEIRARCHICAL SELECTOR:-
+    =============================
+
+		--> let's say there is many div's with the class name 'the-combo'. but i want to apply an specific style to an 'div' with that class name with in the 'section' with id 'demo'.
+				==> #demo .the-combo{
+				
+						#styleing-statements
+					}
+
+
+			==> it is more similar to 
+				   parent child{
+
+						#styling statements
+					
+					}
+
+
+      MULTIPLE SELECTORS:-
+    ========================
+		--> selector1, selector2 {
+
+			#styling statements
+
+		}
+
+
+	combined selectors:-
+  ============================
+
+   element.class/#id{
+
+		#styling statements
+
+		}
+
+
+			note :- all that names should be belong to same element.
+
+
+
+
+
+
+
+
+================================================================================
+
+		--> pillars of web-design:-
+		   ==========================
+			1) color theory
+			2) typography
+			3) user-interface design
+			4) user-experience design
+
+
+
+
+	1) color theory:-
+	====================
+
+		MOODS:-	The intensity and type of color decides, express the mood.
+	      =========
+			-> RED:-    LOVE,ENERGY,INTENSITY
+			-> YELLOW:- JOY, INTELLECT, ATTENTION
+			-> GREEN:-  FRESHNESS,SAFETY,GROWTH
+			-> BLUE:-   STABILITY,TRUST,SERINITY = prasanthatha.
+			-> PURPLE:- ROYALITY, WEALTH, FEMINITY = sthri thathvam.
+
+
+		==> choosing colors that are bright next to each other.  --> it's okay
+		==> but to make design pop -> choose the opposite color i.e complementary color.   --> for logos, icons
+
+
+		*****> adobecolor pallete --> it is an website that gives an triadic,square color pallete.
+
+
+	2) TYPOGRAPHY:-
+   ====================
+
+		==>emotions of fonts:-
+		=========================
+
+	--> SERIF :- traditional (minion pro) , stable (trajan), respectable(baskarville)
+	--> SANS-SERIF :- sensible( helvetica) , simple (avenir), straight forward (din)
+					
+					-> humanist type face is more redable.
+					-> grotesque type face is less redable.
+
+	--> SCRIPT :- personal( free style script), creative( adios script pro), elegant( snell roundhand)
+	--> DISPLAY :- friendly(vag rounded), loud(gin), amusing( thirsty rough)
+	--> MODERN :- stylish(scakers Gothic), chic (Gotham), smart(futura).
+
+
+
+   3) USER-INTERFACE DESIGN:-
+  =============================
+	-> TOGRAP USER ATTENTION
+
+ 
+	****> heirarchy   --> makes skimming --> imp info can be get quickly.
+
+	    > layout      --> 40-60 character per line is the most optimum length for the user to read.
+         
+	    > allignment  --> just reduce the no.of allignment points so 
+					   that it look more professional
+
+	    > white-space -->white spacing around the things make that things expensive.
+
+
+
+  4) USER-EXPERIENCE DESIGN:-
+ ==============================
+
+	the design should be 
+	--> simplicity
+	--> consistent 
+	--> use F or Z patern. { since it is the most reading pattern}
+	--> test it is adoptable for all kinds of devices.
+
+
+	--> ** rayan air --> cheap air line europe  --> it is bad example for bad-user-interface.
+
+
+
+=================================================================================================================
+
+JAVA SCRIPT   (language that powers the web):-
+===============================================				
+
+	--> it is a scripting, interpreted language
+	--> without javascript the web is not powerful
+	--> interpreted languages are :- toy,slow, executed line by line
+	--> compiled languages are :-    serious, fast, executeed all at a time.
+
+
+
+	--> typeOf( ) ==> it is used to get the data-type of things.
+	
+	--> window.alert( ) ==> short form --> alert( ) --> it gives a pop up with the message inside the alert().
+	
+
+	--> var myName = "";  --> syntax for initialising variables.
+	--> var demo; 		  --> and when u use it inside alert it gives --> undefiined.
+
+	--> prompt("what's your age:") --> it gives the prompt msg and also give a chance to user to give his input and it takes that input.
+
+
+	--> console.log( ) --> it is used to display the output on the screen.
+						it is only helps for developer for debugging and find out the error or problem.
+
+
+
+	--> variable name should contain only --> AabcD123$_
+
+	--> so it is better to use camelcasing for best practise.
+
+	--> word.slice(starting_position, ending_position);
+	
+	--> word.toUpperCase();
+	--> word.toLowerCase();
+
+
+/*
+	Certainly! In addition to camel casing, there are several other commonly used casing conventions in programming. Here are a few examples:
+
+1. Pascal Case (or Upper Camel Case): Similar to camel casing, but with the first letter of each word capitalized, including the first word. Pascal case is often used to name classes or types in many programming languages. For example: `FirstName`, `LastName`, `CalculateTotalAmount`.
+
+2. Snake Case: Words are written in lowercase, and each word is separated by an underscore `_`. Snake case is commonly used in Python for variable and function names. For example: `first_name`, `last_name`, `calculate_total_amount`.
+
+3. Kebab Case (or Spinal Case): Words are written in lowercase, and each word is separated by a hyphen `-`. Kebab case is often used in URLs and file names. For example: `first-name`, `last-name`, `calculate-total-amount`.
+
+4. Screaming Snake Case (or SCREAMING_SNAKE_CASE): Similar to snake case, but all letters are capitalized. It is typically used for constants or global variables. For example: `MAX_VALUE`, `DEFAULT_TIMEOUT`.
+
+5. Lowercase: All letters are written in lowercase without any separators. This convention is commonly used for variable names that are short and concise. For example: `firstname`, `lastname`, `totalamount`.
+
+It's important to note that different programming languages and projects may have their own conventions and style guidelines. It's a good practice to follow the specific casing convention recommended by the language or project you are working with to maintain consistency and readability within the codebase.
+
+
+*/
+
+
+	
+
+    ==> function syntax:-
+=============================
+	function functionName(){
+
+
+			// function implementation
+
+		}
+
+
+
+
+
+
+some math functions:-
+===========================
+
+Math.floor();
+Math.round();
+Math.pow(base,power)
+Math.random() --> generates a random number b/w 0 to 1 not including 1.
+
+
+--->    ===  --> it is used to check the equality.
+	  !==   --> not equal symbol.
+
+
+---> the === and == signs check for the equality , but 3= sign check for data-type too, 
+	but 2= sign doesn't check for data-type,
+	
+	
+/*
+
+
+	In JavaScript, the `===` operator and the `==` operator are used for comparison, but they behave differently.
+
+The `===` operator is called the "strict equality operator." It compares two values for equality without performing any type conversion. It returns `true` if the operands are of the same type and have the same value, and `false` otherwise. For example:
+
+```javascript
+console.log(5 === 5);      // true
+console.log(5 === "5");    // false
+console.log(true === 1);   // false
+```
+
+As you can see, `===` checks both the value and the type of the operands. It is generally considered a best practice to use `===` for equality comparisons in JavaScript because it avoids unexpected type coercion.
+
+On the other hand, the `==` operator is called the "loose equality operator" or "abstract equality operator." It also compares two values for equality, but it performs type coercion if the operands are of different types. This means that if the operands are of different types, JavaScript tries to convert one or both of them to a common type before making the comparison. For example:
+
+```javascript
+console.log(5 == 5);       // true
+console.log(5 == "5");     // true (performs type coercion)
+console.log(true == 1);    // true (performs type coercion)
+```
+
+As you can see, `==` allows for type coercion, which can sometimes lead to unexpected results. Therefore, it is generally recommended to use `===` instead of `==` to avoid potential pitfalls associated with type coercion.
+
+In summary, `===` performs a strict equality comparison without type coercion, while `==` performs a loose equality comparison with type coercion. It's generally safer to use `===` unless you have a specific reason to use `==` and understand its potential implications.
+
+
+
+*/
+
+
+		==> array in java-script :-
+===========================================
+
+var array = [ ];
+
+--> some functions on array :-
+	======================
+		array.length;
+		array[item_position]
+		array.includes(item) --> gives true if that item presents in the array.
+
+		array.push(item) --> append at last.
+		array.pop()	   --> remove the last item.
+	
+
+--> in the control flow --> the order of the 'if' , 'else if' and 'else' matters a lot.
+
+
+	***> parseInt(string, radix)  --> it convers to int i.e decimal system, radix is nothing but currently
+				
+					-> in which number system the stringed number is, ex:- bin then its radix is 2.
+					
+
+
+
+--> the java-script can be included in html pages in 3-ways:-
+	===========================================================
+
+		inline :-
+	  ===============
+		-> onload="alert();"	  --> in the html element --> it is for example.
+
+
+
+		internal:-
+	========================
+
+		<script>
+				
+			// script functions 
+
+		</script>
+
+	# the script should be placed at just above the closing body tag, beacuse the "js"
+		applied to the html element only if that element exists, so the script should be placed at just above the closing body tag.
+
+
+
+		external :-
+	=========================
+
+	->make a file with an extension of "file_name.js"
+	
+	-> then write u r script functions in that file
+
+	-> then link that script file at just above the closing body tag.
+		-> it makes to load u r webpages more fast.
+
+		<script src="index.js"> </script>
+
+	
+/*------------------------------------------------------------------------------------------------------------*/
+
+
+===========================================================
+
+		DOM
+==================================
+
+	-> everything in the html document is converted into objects and it is represented in the
+		form of tree structure with "document" is the head.
+
+	-> to traverse the tree structure , the syntax would be
+
+		-> document.firstElementChild.firstElementChild 		--> it is an example.
+
+ 	
+
+	==> the objects in the dom has both properties{ what it has , EX:- innerHTML, style, firstElementChild }
+
+		and methods { it tells about its behavior, EX:- click(), appendChild(), setAttribute() }.
+
+	-> . notation is used to tap into the properties and methods of an object.
+
+
+	==> firstElementChild, lastElementChild   --> give the first and last child elements of a parent.
+
+	==> previousElementSibling, nextElementSibling  --> gives the previous and next , sibiling elements of the current element.
+
+			ex:-  a
+				_____     ==> a is parent, (b, c , d) are child of 'a' and (b, c, d) are siblings of each other.
+				b c d 
+
+
+
+
+	for selecting things :-
+   ==============================
+
+	-> document.querySelector( )		  --> selects an single element.
+
+	-> document.getElementsByTagName( )      --> it gives an array.
+
+			.getElementsByName( )           --> id laga name ane Attribute kuda vundi.
+
+			.getElementsByClassName( )	   --> it gives an array.
+
+
+			.getElementById( )
+			
+			###   .tagName --> gives the tag name.
+
+
+	--> using heirarchial selector grand child can also be used.      --> this point comes under css selectors.
+
+	--> in  "querySelector( )" --> all the css selector can be used inside this paranthesis.
+
+			--> it gives only the first satisfying element , even there are more number of satisfying element.
+
+			--> then, to get all the satisfying elements "querySelectorAll( )" --> it gives list of nodes.
+
+
+
+	  
+
+===> in javascript  the styling properties are also in camelcasing.
+
+	--> and the values for that property are assigned as a "string".
+
+
+
+			EX:-
+		==============
+
+			document.querySelector('.btn').style.backgroundColor = 'cyan';
+
+
+
+
+  ****>  "classList" has many intresting properties like 'add,remove,toggle' the classes into an element.
+
+
+	==> DIFFERENCE B/W "innerHTML" and "textContent"
+   =====================================================
+
+		--> innerHTML  --> gives every thing b/w those tags of the selected element.
+		--> textContent --> gives only the content or msg present b/w those tag of the selected element.
+
+
+
+
+
+==> every thing that present in the opening tag of any element are called => attributes
+		ex:- class, href, src, etc
+
+
+
+
+
+****> some special properties:-
+	==============================
+
+		.attributes; --> it gives the list of attributes that are associated or applied on the selected element.
+
+
+					EX:- IF it gives ['href', 'target']
+
+
+		## then to get to know the values assigned to the 'href' only
+
+		
+		.getAttribute('href');
+
+
+		## then in order to change that value or set an another value.
+
+
+		.setAttribute('href','firefox.com');
+
+
+
+
+
+========================>
+
+	--> an anonymous function is nothing but a function without function name.
+
+		
+				-> function ( ){
+
+					//	function implementation
+
+					}
+
+
+
+
+=============================
+
+
+
+ ===> to add an event listner to an element using java-script :-
+
+		-> first select the element and then add event listner
+
+			****> document.querySelector('button').addEventListner('event_type', function_name);
+
+						--> event_type -> it may be click,mouseenter,mouseleave,etc
+						--> and as the second input u can give the function name and that function can be 
+							declared outside or u can directly write an "anonymous" function as an second input.
+
+
+		===> "this" keyword gives the identity of the object, that is curently used.
+
+
+
+
+
+===============================
+
+		-> to set an back-ground image using css
+
+				background-image:url('path');
+
+
+
+
+
+=================================================
+
+		-> initialising the object in java-script manually like this:-
+	  ====================================================================
+
+		var BellBoy = {
+
+
+  			       name : 'tim',
+ 
+			       age : 25,                       // property : value,
+
+			       Gender : 'male',
+
+			       experience : 2
+
+
+			
+		// to create a method , example
+
+	
+			
+		moveSuitCase : function( ){
+
+
+				// function implementation statements;
+
+
+			}
+
+
+	}
+
+
+
+		---> then the syntax for acessing the specific property of an object:-
+
+		        => BellBoy.name;  --> as per convention make sure that the name should be capitalised every word.
+
+		--> to access methods:-
+					=> BellBoy.moveSuitCase( );
+
+
+
+=======================================================>
+			much easy and efficient way to create objects is using the constructor function :-
+
+==================================================================
+
+			example constructor function:-
+			===============================
+
+
+function HotelBoy(name, age, gender, exp, languagesKnown){
+
+
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.exp = exp;
+    this.languagesKnown = languagesKnown;
+
+
+
+    // to create method example:-
+
+
+    this.moveSuitCase = function ( ){
+
+
+			// funtion implementation statements;
+
+		}
+
+  }
+
+
+
+
+// initialising object after creating the constructor
+
+
+	var hotelBoy1 = new HotelBoy('raj', 22, 'm', 2, ['tel','tamil','eng']);
+
+
+	// for accessing the properties and methods the same way with the help of .notation
+
+
+
+		hotelBoy1.languagesKnown;
+		
+		hotelBoy1.moveSuitCase( );
+
+
+===================================================================
+
+
+
+
+		KEY-BOARD EVENT LISTNERS:-
+
+			-> key-press is depricated , so keydown is used.
+
+
+
+
+			--> the keyboard listeners should be attached to the entire document,
+
+					and to know which specific key is pressed you should give the event parameter in the function.
+
+
+
+			  SYNTAX:-  
+
+			==================							
+							
+			// addEventListenter is an higher order function, it calls the 'keyDetector' function										|					
+			document.addEventListener('keydown', keyDetector);		
+
+			 
+
+			// keyDetector is an function			
+			function keyDetector(event){
+
+				
+					console.log( event );
+
+				}
+
+
+
+
+						***> another way directly implementing the anonymous function there itself.
+							======================================================================
+
+			
+		
+			document.addEventListner( 'keydown' , function (event) { console.log("event details"+event) } );
+
+
+
+		EXAMPLE:-
+	=============================
+
+	document.addEventListener('keydown', function(ev){
+        if(ev.key==='m'){
+            console.log(`hey, you clicked on ${ev.key} key:`);
+        }
+        else{
+            console.log('sorry, try again:');
+        }
+     
+       });
+
+
+
+
+													
+
+
+
+================================================================================
+
+IMPLEMENTATION OF CALL BACK FUNCTION FROM SCRATCH WITH AN EXAMPLE :-
+==========================================================================
+
+
+function EventHappened(eventType, time, duration){
+
+            this.eventType = eventType;
+
+            this.time     =  time;
+
+            this.duration  =  duration;
+
+}
+
+
+
+function hemEventListner(typeOfEvent, callBackFunc){
+
+
+            var eventObject = new EventHappened('key-press','10:20','20 sec');
+
+
+        if (eventObject.eventType === typeOfEvent){
+
+                    callBackFunc(eventObject);
+            
+        }
+
+            
+}
+
+
+function demo( inpeve){
+
+
+    console.log('your event details are shown below');
+    console.log(inpeve);
+    
+}
+
+
+
+
+
+
+// the above all internal implementation, now just we are using it in our purpose :-
+
+
+		hemEventListner('key-press', demo);
+
+
+
+
+
+
+
+
+
+======================================================================================================================================
+
+
+				JQUERY ( the javascript library that will prevent our fingers from breaking )
+======================================================================================================================================
+
+
+
+
+--> selecting elements using jquery:-
+
+		==>	jQuery('h1') or  in short form --> $('h1')
+
+-->we can incorporate jquery in our website , in 2 ways i.e through downloading its files or using the "cdn" link.
+--> use google hosted cdn library for better.
+
+--> place the "jquery" cdn-link just above the "java-script link".
+
+
+
+***===> if u want to place the 'scripts' tag inside 'head-section' then for proper working of the 
+		scripts you should 'include' all your scripts code inside the below mentioned function.
+
+				$(document).ready( function(){
+
+							// all your script code
+
+					});
+
+
+				without jQuery the above function syntax would be:-
+				=====================================================
+				
+				document.readyState( function(){
+						
+						// all your script code
+
+					});
+
+
+
+			## the meaning of the above function is after getting the 'jquery' and all the required things i.e after the document is ready,
+			   then the ready function will call back the function , which is inside the ready function then our scripts will executed.
+
+					****> it is same as placing all our scripts and scripts related links at just above the closing 'body' tag.
+
+
+
+============================
+
+--> use online minification tools to minimises the code by removing(comments, new lines, and spaces)
+
+
+
+--> there is no difference b/w selecting one and selecting many with jQuery.
+
+		ex:-    using js						    		using jQuery
+
+			document.querySelector('button')				         $('button')
+
+			document.querySelectorAll('button')			                 $('button')
+
+
+
+
+==> then for manipulating the css of the selected element using the jQuery
+		$('button').css('background-color','cyan')    ### both the property and it's value should be inside quotations.
+
+
+==> you can get the value of its attributes by;
+
+		EX:-			console.log( $('h1').css('font-size') );
+	  ===========
+
+
+
+.html -file ==> all about content
+.css  -file ==> all about apearance
+.js 	 -file ==> all about behaviour
+
+
+
+=======================================
+
+--> adding and removing class using jQuery.
+
+		$('h1').addClass("class_name1 class_name2");
+
+		$('h1').removeClass("class_name1 class_name2");
+
+	## to check that element has a class or not
+
+		$('h1').hasClass('class_name');
+
+
+============================================
+
+--> manipulating text using jQuery:-
+	=================================
+
+	$('h1').text('it is not a heading')
+
+	$('h1').html(<em>it is in italic</em>)		## it is similar to | .innerHTML
+
+
+
+====================================================
+
+--> manipulating attributes using jQuery:-
+
+
+	--> $('h1').attr('href')	--> placing it inside the console.log( ); --> it gives the value of the attribute.
+							
+							--> it is similar to getAttribute('href');
+
+	--> $('h1').attr('href', 'https://www.google.com'); --> it is similar to setAttribute( );
+
+========================================================
+
+indexces
+
+
+--> to get a specific element in a list of elements in jQuery we have to use an method called.
+
+			.eq(index_position);
+
+--> and to get an element's index position
+		
+			.index(element);
+
+
+Example:-
+==========
+
+    <p>iam a paragraph</p>
+    <p class = 'p2'>iam an <b>second</b>  paragraph</p>
+    <p>iam an third paragraph</p>
+
+
+==> i have 3 paragraphs :-
+
+$(p).eq(1) --> it gives the second paragraph i.e ==> <p class = 'p2'>iam an <b>second</b>  paragraph</p>
+
+
+--> to get the index value of '.p1' paragraph  from the above list of 3 paragraphs.
+
+$('.p1').index(p)
+
+
+
+
+example of adding event listner:-
+------------------------------------
+
+		$('button').eq(2).click( function ( ){
+
+				
+				$('h1').css('color', 'orange');
+
+		});
+
+
+
+
+// another efficient way of adding events :-
+
+
+$('h1').on('click', function( ){
+
+		 $('h1').css( 'color', 'cyan'); 
+
+	} );
+	
+
+// keydown event
+
+$(document).keydown(function(ev){console.log(ev.key);});
+
+
+
+============================================================================
+
+
+
+--> jQuery allows to add and remove elements on the fly
+
+
+	$('h1').position( '<button> new </button>');
+
+
+		here :-
+	==============
+
+		-> position can be
+			
+			before :- add that element before the selected element.
+
+			after  :- add that element after the selected element.
+
+			prepend :- add before the content and after the opening tag of the selected element.
+
+			append :- add after the content and before the closing tag of the selected element.
+
+
+
+
+=================================================================================
+
+
+--> jQuery methods that helps to create animations:-
+	--------------------------------------------------
+
+		$('button').eq(2).on('click', function ( ){
+
+				$('h1').animated_function();
+
+
+					// the above 'animated_function' may be 
+
+						hide( ) --> it hides
+
+						show( ) --> it shows
+
+						toggle( ) --> to toggle.
+
+						fadeOut( ) --> it reduces opacity and then disappears.
+
+						fadeIn( )  --> it increases opacity and then appears.
+
+						fadeToggle( ) --> it fade in and fade out.
+
+						slideUp( )   --> it slides up and it hides.
+
+						slideDown( ) --> it slides down and it visible.
+
+						slideToggle( ) --> it slides up and slides down.
+
+
+					// to use custom animation.
+
+
+						animate( {opacity : 0.5;} ) 		// make sure that the value for that property is numerical.
+
+
+						// to perform more than 1 animated using jQuery
+
+						
+								then use chaining the methods then that methods will apply one after another.
+
+						
+					EXAMPLE:-
+				==================
+
+						$('h1').slideUP().slideDown().animate({opacity : 0.5 ; });
+
+
+
+
+
+
+			}
+
+
+
+			============================================================================
+
+
+
+				----> Animations using CSS :-
+
+					==========================
+
+
+						--> using 'animation' property and its related properties.
+
+
+						--> using transformation properties	--> like changing angle, size etc
+
+						
+						--> using transition properties
+
+
+			
+
+
+
+			
+
+
+
+============================================================================================================
+
+
+
+
+
+
+		

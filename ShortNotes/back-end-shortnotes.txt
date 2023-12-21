@@ -1,0 +1,564 @@
+
+--> you can print multiple things at a time using
+
+	--> console.log(a, b, c)
+
+
+
+--> os = kernel{ (nut that we eat)[ in computing 'kernel' is nothing but the 
+	
+					program that directly interacts with the hardware] so it is the core of the os } 
+
+ 		+ shell{ (outside-layer) [ in computing 'shell' is nothing but a user-interface, that helps the 
+
+					user to interact with the kernel ] }
+
+
+
+
+
+		===> shells are of 2 types:-
+
+				-> gui
+
+				-> cli
+
+
+
+### most crazy website "hackertyper.com"
+
+
+## trick :-  in a long command if u want u r cursor to move to a specific place to correct the command, 
+			then press and hold 'alt' key and then click where u want the cursur to move.
+
+
+
+			ctrl+A --> to move to the begining of the command. [or] use home button
+
+			ctrl+e --> to move to the end of the command. [or] use end button.
+
+
+			ctrl+u --> to clear the command.
+
+
+===========================================================
+
+
+
+setting up the server for our project :-
+===========================================
+
+--> create a folder with project name
+
+--> go inside it and create 'app.js and other structural and styling files if required.
+
+--> use 'npm init' to initialise and start setting up answer for the prompts respectively.
+
+--> then using node to start the server ' node app.js'
+
+--> for more benefits if u use 'nodemon' then the command is 'nodemon app.js'
+
+
+
+
+
+
+
+=================================
+
+
+use 'start' command to open file using hyper in windows for mac use 'open'
+
+
+		--> by default it opens in a 'notepad' text editor to open it with an any 
+			
+			specific application then the command may look like this.
+
+			   $	start code demo23.txt     // now it opens in vscode
+
+
+
+
+#### crazy command that clear u r entire hard-disk :)
+
+		$ sudo rm -rf --no-preserve-root
+
+
+==========================================================================================
+
+
+****> nodejs was made to basically liberate javascript from the browser and allow programmers
+
+		to use java-script to interact with computer directly
+
+
+
+# repl :- read evaluate print loop
+
+## syntax for executing the java-script files using the nodejs 
+
+			   $ node file_name.js
+
+-> with node we can use its native functions and modules
+
+
+=========================================
+
+--> node package manager ==> npm
+
+	-> with 'npm' we can download external modules into our project folder.
+
+
+	-> contains bits of reusable code 
+
+	-> npm is already bundled with node,
+
+
+***> use $ npm init 
+	
+	command to create a package and do your project.
+========================================================================================
+
+--> syntax to import modules in nodejs
+
+	const temp = require('module_name');
+
+EXample:-
+----------
+// importing 'fs' module
+
+const fp = require('fs');
+
+Details about 'fs' module :-
+-----------------------------
+The full form of the "fs" module in Node.js is "File System" module. It is a built-in module in Node.js that provides functionality for interacting with the file system on your computer. The "fs" module allows you to perform various file-related operations such as reading from and writing to files, creating and deleting files, modifying file permissions, and more. It provides both synchronous and asynchronous methods for working with files, giving you flexibility in handling file operations based on your requirements.
+
+
+====> fp.copyFileSync(source_path, destination_path);
+
+	// it is an synchronous method , it means stops the execution of the program utill the file copying is done.
+
+===> fs.copyFile(sourcePath, destinationPath, (err) => {		// it is asynchronous file copy method.
+      
+      if (err) {
+     		console.error('An error occurred while copying the file:', err);
+	  } else {
+    		console.log('File copied successfully!');
+	  }
+     });
+
+
+
+===============================
+
+*****> EXPRESS JS
+	==============
+
+Express is a minimal and flexible Node.js web application framework that 
+provides a robust set of features for web and mobile applications.
+
+
+	-> it is just like 'jQuery' for 'java-script'
+
+	-> express-js(specifically for web-applications built with node)  for node-js.
+
+==> but remember 'node-js' is built on 'js'.
+
+
+
+		===> anology to understand more easily:-
+			=======================================
+
+				-> node is just like a 'philips screwdriver' used for any type of screws to remove and insert.
+
+				
+				-> express-js is an motorised screw-driver , it is more fast, advanced and designed for specific purpose.
+
+
+
+
+
+==> actually '--save' is nothing but it adds into the dependecies list.
+
+		but above node 5 it is automatically done.
+
+
+
+
+****> trick :-
+===============
+
+to open folder and it's file in vscode using cli
+	
+	$ code .
+
+=============================================================
+
+use this sign ` ` and ${variable_name}, for creating just like fstrings in python.
+
+
+
+
+	-> ` ` --> this sign is a special kind of string.
+
+
+##=======================================================================
+
+	BASIC CODE SNIPPET THAT IS USED TO SET UP OUR SERVER:-
+	=======================================================
+
+	const express = require('express');       // importing server program module
+	const app = express();			  // initialising server program          
+
+	const portNo = 2345; 		// setting our server to listen requests at this port , any body requested at this port , then reply
+
+
+	app.listen(portNo) 		// now our server will listen at 'portNO'
+
+	
+
+
+
+	==> in the express framework :-
+	========================================
+
+			app.get('/', function (req, res){
+
+					res.send( );   // this method is used to send the individual bits of data
+
+					res.sendFile( ); // this method is used to send a file to render on the browser 
+
+									when the server get an request to that path.
+
+
+				} );
+
+
+
+
+		**--> __dirname  --> gives the full path for the current directory.
+
+
+
+
+---> body-parser is an external package that work with express to parse the data comes from the user.
+
+		and it has several modes like:-
+
+		const bodyParser = require('body-parser')
+	
+
+			bodyParser.text()
+
+				  .json()
+
+			 	  .urlencoded( {extended: true} )   		// mostly used to parse the html forms.
+
+									// using 'extended:true' allows to post nested objects.
+
+
+======> ABOUT NODEMON
+	  ===================
+
+--> nodemon automatically resart the server and render the services when it detect the changes.
+
+	--> usage:-
+
+		$ nodemon server.js
+
+
+
+
+
+
+******> API :-
+	=======================
+
+
+		-> stands for application programming language that has functions, protocols that helps in 
+
+		   building software and interact with an external system.
+
+
+			-> api's has:-
+				-----------
+
+					endpoint + path + parameters + authentication 
+					
+					-------- narrowdown to specific thing --------> 
+
+					--> parameters used to search for specific thing.
+
+
+					-> the parameters is added after the path in the url with an '?' before the 1st parameter 
+
+						    and use & to include more than 1 parameter
+
+						
+						--> for authentication api-key is used and it should be used as:
+
+								&app-id = api-key   // it is for example.
+
+
+
+
+
+
+===> the api's can send data in many forms like :-
+
+	xml,html, json 
+
+	-> 'json' is the most popular format of transmiting of data in the internet.
+
+
+	-> json = java script object notation, it is light weight and more redable, and easily 
+
+			get convert back into javascript objects.
+
+
+
+
+
+==> can't use more than 1 send() method in 1 app.get( ) function.
+
+	--> but we can use multiple "res.write()" and finally use 1 "res.send()" to  send the whole data.
+
+
+	--> we should use 'res.setHeader("Content-Type", "text/html"); ' to work the 
+
+		"res.write()" to include "html" elements.
+
+
+
+
+
+====> ** smaple code to get data using api call to an external site.
+
+		=============================================================
+
+
+
+		https.get(url, function(results){
+
+            results.on('data', function(info){              // we did this because we are only concentrated on the data it have.
+          
+		  weatherData = JSON.parse(info);
+
+			}
+
+		); 
+
+
+		// here 'info' is the datachunck got from server, it is in binary format in the buffer's of nodejs, 
+		   when we try to print using console.log(info) --> it acutomatically convert from binary to 'human readable'
+		   hexadecimal format.
+
+		// info.toString('utf-8')  --> it converts the bufferobject  into string
+
+
+		// some performance is increased if we convert buffer object to string and then parsing it into javascript object.
+
+		// results is just like the response from server after sending request 
+
+		  using http.get()
+
+		// then in the life time of 'results' object it receives data in the form of chuncks.
+
+
+
+
+
+
+
+
+===========> key terms :-
+		  ===============
+
+--> website is static
+
+--> webapplication is dynamic.
+
+
+===> broad categorization of 'hhtps response status codes' :-
+	-----------------------------------------------------------
+
+
+	1) informational  -> (100 - 199)
+
+	2) successful 	   -> (200 - 299)
+	
+	3) Redirects 	   -> (300 - 399)
+
+	4) client errors  -> (400 - 499)
+
+	5) server errors  -> (500 - 599) 
+
+
+
+	
+=============> to link css,and images and everything other resources
+
+			=========================================================
+
+var path = require('path');
+app.use(express.static(path.join(__dirname,'/public')));
+
+
+
+
+
+
+=====================================================
+
+
+--> to redirect to another page with the help of an method.
+
+	app.post('/failure', function(req, res){
+     res.redirect('/');
+	
+		});
+
+
+
+
+================================================================
+
+		steps to create an app in heroku
+
+		
+		1) download and install heroku cli
+
+		2) come to 'hyper' terminal and navigate to that project folder
+
+		3) login into u r heroku account
+
+			$ heroku login
+
+		4) then crate an 'Procfile' with same spelling and no extention and write below sentence in it
+
+				web: npm start
+
+			-> also in the app.js file change the 'port' to 'process.env.PORT' // so that it listen on the random 
+			   port that is assigned by the heroku.
+
+
+		5) then initialise the git 
+
+				$ git init
+
+				$ git add .    // adding all the files in our current project
+
+				$ git commit -m "custom-message"
+
+		6) then creating the app with an command
+
+				$ heroku create
+
+		7) then push all the files into the heroku server
+
+				$ git push heroku master
+
+
+
+				
+
+
+
+
+
+
+learn about this error:-
+==========================
+
+Converting circular structure to JSON
+
+
+
+====================================================================================================
+
+
+			GIT AND GIT HUB
+
+================================================================================
+
+// since we are using git latest version 
+
+	$ git init -b main
+
+// and change the symbolic header to main
+
+	$ git symbolic-ref HEAD refs/heads/main
+
+
+
+--> to keep track of versions of files we have to move into staging area by using the command
+	
+		$ git add file_name
+
+
+---> To unstage a file, use 
+
+		$ git rm --cached file_name
+
+		
+
+		$ git commit -m "custom_message"  		// make sure that the commit messages are in present tense.
+
+
+										# Commits the tracked changes and prepares them to be pushed to a remote repository.
+
+
+
+--> to more see details about the changes u have made use the following command
+
+		$ git log
+
+
+--> to add every thing from the working directory to the staging area of the git
+
+		$ git add .
+
+
+
+-->   $ git diff file_name
+
+		// it gives the details about the difference between the last version in the git-repository and the file in the working directory
+
+
+--> $ git restore file_name 
+
+			// to get the ( last saved version of the file_name in the git-repository ) into the working directory.
+
+
+
+--> to push local repository into u r remote repository in 'github'
+
+		1) first u have to add u r remote repository
+
+		2) then u have to push the local repository files
+
+			commands to do this task are :-
+
+		$ git remote add origin 'remote_repository_url'
+
+		$ git push -u origin master		// -u flag is to link the local and remote repositories.
+									// master is the main branch.
+
+
+
+---> to change remote git repository 
+
+		$ git remote set-url origin git://new.url.here
+
+
+--> to just remove git remote origin 
+
+		$ git remote remove origin
+
+
+
+--> to get the remote repository url 
+
+	$ git remote -v
+
+
