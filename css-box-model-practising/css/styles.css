@@ -1,0 +1,65 @@
+
+/*
+
+
+border:solid; --> gives an solid border
+
+let say out div height and width be "300 x 300"
+    if we specify border-width:50px; then the div width not change
+        but our box width will change i.e 50px +300px(div width) + 50px;
+
+margin :- it is an buffer zone b/w the current element and the all other elements,
+           it acts as a invisible seperator.
+
+--> margin doesn't effect the width and height of the total size of box, but
+    the border,padding will effect the total sizes of the box.
+
+
+
+
+*/
+
+
+
+
+
+body{
+    margin: 0px;
+}
+
+h1{
+    margin-top: 0px;
+    
+    
+}
+
+p{
+    margin-top: 0px;
+    
+}
+
+.top{
+    background-color: #E4F9F5;
+    border: solid 10px;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+.middle{
+
+    width: 200px;
+    height: 200px;
+    margin-left: 260px;
+    border: solid 20px;
+    background-color: red;
+}
+
+.bottom{
+
+    width: 200px;
+    height: 200px;
+    margin-left: 500px;
+    border: solid 10px;
+    background-color: yellow;
+}
