@@ -1,0 +1,442 @@
+
+/*
+
+-> to underline text using css property, text-decoration:underline;
+
+========> CSS DISPLAYING
+============================
+
+
+DISPLAY --> PROPERTY HAS FOUR DIFFERENT VALUES
+        --> Block
+        --> Inline
+        --> Inline -Block
+        --> None
+
+block display elements:-
+========================
+==> some block elements by default blocks other elements to sit along with them on the webpage.
+    -> by default they only themselves occupy the entire width eventhough they are small size.
+    EXAMPLES:-
+    ============
+    <p> , <headings>, <div>, lists{ <ol> , <ul> }, forms.
+
+
+    ---> the width of block elements can be changed and also the display property 
+         also can be changed from block(default) to "inline"
+         then it can't  block.
+
+        ex:-
+        ====
+
+        p{
+
+            width : 40 px;
+            display : inline;
+
+        }
+
+
+
+
+==> non blocking elemnts( inline display elements):-
+============================
+-> e type of elements lo  vunna content ki enta space kavalo antha space mathram tiskuntundi.
+    EX:- <span></span>
+        <img>
+        <a>
+
+**> problem with inline elements is -> the width can't be changed.
+        --> but if u change their display property from "inline" to "block" their width
+            can be able to change but now they are blocking.
+
+
+==>  INLINE-BLOCK property has both the advantages.
+
+==> diplay : none;
+    ================
+        -> it makes that element not visible on the page and also the contents in that
+            occupying space is also freen and it can be used by some other else element.
+
+    visibility : hidden;
+    =====================
+        this property hides the element from webpage but the space used by the content in it , is still remain there
+        in the webpage.
+
+
+        ***>  children sit on top of parents.
+
+========> CSS POSITIONING
+============================
+
+--> position --> static   --> by default all html element are static in nature.
+                 relative
+                 absolute
+                 fixed
+                
+
+                 RELATIVE:-
+                 =========
+                 --> margin like space it takes
+                 --> it doesn't effect addamgavunte vativi , it just flow over it.
+
+                 --> position : relative
+                        additionally it also require any combination of these
+                            -> top,right,bottom, left
+                    
+                 --> relative position anedi , a element natural ga website meda place ina position nundi.
+
+            =======> ABSOLUTE:-
+            =====================
+                idi dani parent element ki relative ga move avuthundi, so dini daggarlo ni parent "position:relative" ga pettali.
+                lekapothe default ga "body" ni parent ga anukoni daniki relative ga move avuthundi.
+
+
+
+                    EX:-
+                   =======
+                   <div>
+                        <img>
+
+                   </div>
+
+                   ---------------
+
+                    div{
+                        position:relative;
+
+                    }
+
+                   img{
+                    position:absolute;
+                    right:30px;
+                   }
+
+                   ---> the image element w.r.t its parent element "div" gives 30px right margin.
+
+                   ***>imp>>
+                   ===========
+                   --> in absolute positioning after changing an element their intial space is free now and below elements
+                        can automatically moved,
+                        but in relative their initial space filled up by some air.
+
+
+                    =====>FIXED:-
+                =====================
+                    --> if u give "position:fixed" to an element then it is fixed in that position even on scrolling the web-page.
+                    
+
+
+                 
+        CENTERING :-
+        ============
+        -> to center all the { inline-block} elements inside a container,
+                   and that elements are not width specified,
+                   then it is,
+                    |    -> text-align:center;  |
+            -> if that elements are "width" specified then, it would make center by
+                   adding an extra element along with "width"
+                 "  i.e margin : 0 auto;  "
+
+
+
+        FONTS:-
+    =================
+    -> serif :- have a little feet    ---> it is more autoritative, legal, official, serious.
+    -> sans-serif :-` doesn't have any feet.  -->> it is friendly, delicious, simple { startup mostly used}
+                        -> under this humanist is more readable.
+    -> monospace:- equal space b/w each character.
+    -> fantasy:- its just like fansy design
+    -> cursive :- handwritten cursive.
+
+    ** better to use websafe fonts so our website text renderd correctly in maximum cases.
+                   --> refer "css font stack" web site.
+                   --> use "fonts.google.com" to embed fonts on to u r website so it works in all users devices:).bottom-cloud
+
+
+        LIST OF GOOD FONTS:-
+        =====================
+                   ---> these fonts found in "fonts.google.com"
+
+        -> merriweather
+        -> sacramento   -> handwritten cursive
+        -> montserrat
+
+
+        --> to incorporate those google fonts add the source link in 
+                   the head section of the "index.html"
+
+        --> and its font-family style in the place where u want to effect the font style.
+
+        -> stick to 2 diff fonts in making beautiful,
+                   -> choose similar mood , and time era.
+
+
+
+
+
+
+        ====> CHARACTERISTICS THAT THE GOOD FONTS SHOULD POSSESS:-
+        ===================================================================
+        -> open shapes
+        -> ample inter character spacing
+        -> unambiguous forms
+        -> varying proportions.
+
+
+        ================>
+                   --> best website for images:-
+                   ===============================
+                            --> flaticon.com
+                            -->for animated image--> giphy.com 
+
+    
+
+                ==> in px the font is static.
+                ==> 16px = 100% = 1em
+                ==> then use this equation and use interms of % or em to make dynamic.
+
+
+
+                --> the "em" and "%" inherits the value from its parent also
+                --> where as in "rem" the current value is applied.
+
+                --> so better to use "rem" instead of "em or %".
+
+
+
+                --> USING the property " clear : left or right"
+                    we can make the text that is floating around an image to set down.
+
+
+
+                --> mostly we use float property.
+
+
+
+
+                --> to generate beautiful buttons:-
+                =====================================
+                    --> use this site:- css3buttongenerator.com
+
+                    
+
+*/
+
+
+body{
+
+    color: #40514E;
+    margin:0;
+    text-align: center;
+    font-family: 'Merriweather', serif; 
+    background-color: #C0DEFF;
+
+}
+
+
+
+h1{
+
+    color: #66BFBF;
+    font-size: 4.6875rem;
+    margin:50 auto 0 auto; 
+    font-family: 'Sacramento', cursive;
+    
+
+}
+
+
+h2{
+    color: #66BFBF;
+    font-family: 'Montserrat', sans-serif;
+    font-size:2.5rem;
+    font-weight: normal;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+
+
+a{
+
+    color: black;
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+.HR{
+
+     width: 200px;
+     height: 200px;
+     border-radius: 100px;
+}
+
+
+
+.skill-row{
+
+    width:50%;
+    margin: 100px auto;
+    text-align: left;
+    
+    
+    
+}
+
+
+.com-img{
+
+    width:25%;
+    float: left;
+    margin-right:30px;
+    border-radius: 100px;
+
+}
+
+.hot-topic-img{
+
+
+    width: 25%;
+    float: right;
+    margin-left: 10px;
+
+}
+
+.top-container{
+
+    background-color: #E4f9f5 ;
+    padding:100px;
+    position: relative;
+
+
+}
+
+
+.intro{
+
+    width:30%;
+    margin:0 auto;
+    
+}
+
+
+p{
+
+    line-height: 2;
+}
+
+.bottom-cloud{
+
+    position:absolute;
+    left: 250px;
+    bottom: 350px;
+}
+
+.top-cloud{
+
+    position:absolute;
+    right:300px;
+    top:40px;
+    
+}
+
+hr{
+
+
+    width: 5%;
+    border-style: dotted none none;
+    border-width:5px;
+    border-color:gray;
+    size: 2;
+    background-color:white;
+    margin: 100px auto;
+    
+
+
+}
+
+
+.middle-container{
+
+    margin:100px auto;
+    background-color: #C0DEFF;
+
+
+}
+
+
+.contact-msg{
+
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+.bottom-container{
+
+    background-color: #66BFBF;
+    padding: 50px 0 20px;
+
+
+}
+
+
+.logo{
+
+    width:16px;
+    height:16px;
+    
+
+}
+
+
+.cp-right{
+
+    color: #EAF6F6;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    padding: 20px 0;
+
+}
+span{
+
+    text-decoration: underline;
+
+}
+
+
+.btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4,  #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4,  #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4,  #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4,  #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4,  #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+  }
