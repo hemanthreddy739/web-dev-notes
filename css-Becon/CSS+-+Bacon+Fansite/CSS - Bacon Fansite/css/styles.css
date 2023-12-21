@@ -1,0 +1,79 @@
+
+/*
+
+    using "tag" as a selector is general;
+    using "class" as a selector is more specific (id also comes under specific);
+    --> if u apply the "general" and "specific" on an element 
+        the "specific" overrides the general, it is the similar property b/w class and id;
+
+        ===> the difference b/w class and id:-
+        =======================================
+        -> id_name should be unique and it should be only one in the entire page.
+        -> more than one element can have the same class name , and clas_name is also used to group 
+           similar items and perform styling operations on them.
+
+        -> we can apply > 1 class_names to an single element and use those class nmaes and apply 
+           more specific changes to an some elements.==> there should be 2 pace character b/w the class names.
+
+        -> :name => this kind of property are called "pseudo class"
+            EX:-  :hover
+            for using in css styling , the syntax for selection would be
+                -> element:hover
+
+
+        -> "id" is more specific then "class".
+        
+
+*/
+
+
+
+body{
+    margin: 50px;
+    border-style: dotted;
+    border-width:10px;
+    border-color:cyan;
+    padding: 50px;
+    background-color:#FAEAB1;
+}
+
+h1{
+    color: brown;
+}
+
+img{
+    
+    border-width:8px;
+    border-radius: 100px;
+    border-style: dotted;
+}
+
+
+.bacon{
+    border-color: blue;
+}
+
+#bc1{
+    border-color: crimson;
+}
+
+.brocoli{
+    border-color: red;
+}
+
+.cr{
+    border-radius:10px;
+}
+
+
+img:hover{
+    background-color: gold;
+}
+
+
+
+/* 
+
+this is the syntax of comments in css
+
+*/
